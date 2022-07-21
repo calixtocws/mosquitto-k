@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: mqtt-broker
+   labels:
+     app: cwsspot
+spec:
+   replicas: 1
+   selector:
+    matchLabels:
+      app: cwsspot
+   template:
+    metadata:
+      labels:
+        app: cwsspot
+    spec:
+     containers:
+     - name: mqtt-broker01
+       image: calixtocws/cwsspot:latest
+ #      resources:
+       ports:
+       - name: hostport
+         containerPort: 8883
+       - name: clientport
+         containerPort: 1883
