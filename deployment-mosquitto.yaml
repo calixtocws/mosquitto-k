@@ -23,3 +23,5 @@ spec:
          containerPort: 8883
        - name: clientport
          containerPort: 1883
+     nodeSelector:
+      alpha.eksctl.io/nodegroup-name: cws-group-public 
