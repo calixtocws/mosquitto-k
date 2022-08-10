@@ -4,7 +4,7 @@ metadata:
   name: my-service-cwsspot
   annotations:
     # only network load balancer supports static IP
-    # service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
     # comma-separated list of Elastic IP ids
     # the length of the list must be equal to the number of subnets
     service.beta.kubernetes.io/aws-load-balancer-eip-allocations: eipalloc-00c6829b9415b52ac,eipalloc-016be9338dd3acb61  
